@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: NeuroScan
-    buildCommand: pip install -r requirements.txt
-    envVars:
-      - key: FLASK_ENV
-        value: production
