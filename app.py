@@ -60,5 +60,7 @@ def get_uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 0))
+
+    # 0.0.0.0 allows external connections (required by Render and other platforms)
     app.run(host='0.0.0.0', port=port)
