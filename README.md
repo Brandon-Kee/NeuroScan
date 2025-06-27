@@ -1,166 +1,81 @@
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/catiaspsilva/README-template">
-    <img src="images/gators.jpg" alt="Logo" width="150" height="150">
-  </a>
+# 🧠 NeuroScan
+This project is a part of the [Data Science Working Group](http://datascience.codeforsanfrancisco.org) at [Code for San Francisco](http://www.codeforsanfrancisco.org).  Other DSWG projects can be found at the [main GitHub repo](https://github.com/sfbrigade/data-science-wg).
 
-  <h3 align="center">README Template</h3>
+#### -- Project Status: [Active, On-Hold, Completed]
 
-  <p align="center">
-    A README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/catiaspsilva/README-template/blob/main/images/docs.txt"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="#usage">View Demo</a>
-    ·
-    <a href="https://github.com/catiaspsilva/README-template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/catiaspsilva/README-template/issues">Request Feature</a>
-  </p>
-</p>
+## Project Intro/Objective
+The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
 
+### Partner
+* [Name of Partner organization/Government department etc..]
+* Website for partner
+* Partner contact: [Name of Contact], [slack handle of contact if any]
+* If you do not have a partner leave this section out
 
+### Methods Used
+* Inferential Statistics
+* Machine Learning
+* Data Visualization
+* Predictive Modeling
+* etc.
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#dependencies">Dependencies</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#authors">Authors</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
+### Technologies
+* R 
+* Python
+* D3
+* PostGres, MySql
+* Pandas, jupyter
+* HTML
+* JavaScript
+* etc. 
 
+## Project Description
+(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
 
+## Needs of this project
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+- frontend developers
+- data exploration/descriptive statistics
+- data processing/cleaning
+- statistical modeling
+- writeup/reporting
+- etc. (be as specific as possible)
 
-In this section you should describe your project, including any datasets you used and appropriate citations. You may refer to your project report or cite your paper for more detailed information.
-
-[Here goes the title with hyperlink](https://github.com/catiaspsilva/README-template)
-
-You can include tables or images to summarize your results when and if appropriate.
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
-In this section you should provide instructions on how to use this repository to recreate your project locally.
+1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
 
-### Dependencies
+    *If using offline data mention that and how they may obtain the data from the froup)*
+    
+3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
+4. etc...
 
-Here, list all libraries, packages and other dependencies that need to be installed to run your project. Include library versions and how they should be installed if a special requirement is needed.
+*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
 
-For example, this is how you would list them:
-* Transformers 4.8.0
-  ```sh
-  conda install -c conda-forge transformers
-  ```
-* OpenCV 4.5.2
-  ```sh
-  conda install -c conda-forge opencv
-  ```
-### Alternative: Export your Environment
+5. Follow setup [instructions](Link to file)
 
-Alternatively, you can export your Python working environment, push it to your project's repository and allow users to clone it locally. This way, anyone can install it and they will have all dependencies needed. Here is how you export a copy of your Python environment:
-
-  ```sh
-  conda env export > requirements.yml
-  ```
-
-The user will be able to recreate it using:
-
-  ```sh
-  conda env create -f requirements.yml
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/catiaspsilva/README-template.git
-   ```
-2. Setup (and activate) your environment
-  ```sh
-  conda env create -f requirements.yml
-  ```
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. For course projects, include which file to execute and the format of any input variables.
-
-Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/catiaspsilva/README-template/issues) for a list of proposed features (and known issues).
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Featured Notebooks/Analysis/Deliverables
+* [Notebook/Markdown/Slide Deck Title](link)
+* [Notebook/Markdown/Slide DeckTitle](link)
+* [Blog Post](link)
 
 
-<!-- LICENSE -->
-## License
+## Contributing DSWG Members
 
-Distributed under the MIT License. See `LICENSE` for more information.
+**Team Leads (Contacts) : [Full Name](https://github.com/[github handle])(@slackHandle)**
 
+#### Other Members:
 
-<!-- Authors -->
-## Authors
+|Name     |  Slack Handle   | 
+|---------|-----------------|
+|[Full Name](https://github.com/[github handle])| @johnDoe        |
+|[Full Name](https://github.com/[github handle]) |     @janeDoe    |
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-You can acknowledge any individual, group, institution or service.
-* [Catia Silva](https://faculty.eng.ufl.edu/catia-silva/)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-
-## Thank you
-
-<!-- If this is useful: [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg)](https://www.buymeacoffee.com/catiaspsilva) -->
-
-
+## Contact
+* If you haven't joined the SF Brigade Slack, [you can do that here](http://c4sf.me/slack).  
+* Our slack channel is `#datasci-projectname`
+* Feel free to contact team leads with any questions or if you are interested in contributing!
 
 
 
