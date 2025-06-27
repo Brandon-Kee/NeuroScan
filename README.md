@@ -9,7 +9,6 @@ NeuroScan is a deep learning–based computer vision application designed to det
 - Meningioma Tumor
   
 - No Tumor
-
 ## Project Background
 The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
 
