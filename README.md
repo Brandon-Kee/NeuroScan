@@ -1,7 +1,6 @@
 # 🧠 NeuroScan
 NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. The model is trained to distinguish between four distinct classes:
 
-
 - Pituitary Tumor
 
 - Glioma Tumor
