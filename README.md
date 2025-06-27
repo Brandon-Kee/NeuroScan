@@ -69,3 +69,5 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 ## References
 Mathivanan, S. K., Sonaimuthu, S., Murugesan, S., Rajadurai, H., Shivahare, B. D., & Shah, M. A. (2024). Employing deep learning and transfer learning for accurate brain tumor detection. Scientific reports, 14(1), 7232. https://doi.org/10.1038/s41598-024-57970-7
+
+Msoud Nickparvar. (2021). Brain Tumor MRI Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/2645886
