@@ -254,7 +254,7 @@ def main():
                         <div class="neuro-image-container mx-auto">
                     """, unsafe_allow_html=True)
 
-                    st.image(image, use_container_width=True)
+                    st.image(image, width=400)
 
                     st.markdown("""
                         </div>
