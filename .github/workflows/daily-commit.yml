@@ -12,9 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Create empty commit
+      - name: Make empty change to neuroscan_app.py
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "chore: daily empty commit"
+          
+
+          touch neuroscan_app.py
+          
+          # Add the file explicitly
+          git add neuroscan_app.py
+          
+          # Commit even if there's no real diff
+          git commit -m "chore: daily no-op touch on neuroscan_app.py" || echo "No changes to commit"
           git push
