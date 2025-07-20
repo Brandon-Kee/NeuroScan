@@ -49,6 +49,9 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 ## Training the Model
 
+### MobileNetV3
+<img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/93897077-3595-4f92-a6b4-b54e67618f26" />
+
 - frontend developers
 - data exploration/descriptive statistics
 - data processing/cleaning
@@ -68,6 +71,11 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 
 ## References
+Kumar, S., & Mankame, D. P. (2020). Optimization driven deep convolution neural network for brain tumor classification. Biocybernetics and Biomedical Engineering, 40(3), 1190-1204. https://doi.org/10.1016/j.bbe.2020.05.009
+
 Mathivanan, S. K., Sonaimuthu, S., Murugesan, S., Rajadurai, H., Shivahare, B. D., & Shah, M. A. (2024). Employing deep learning and transfer learning for accurate brain tumor detection. Scientific reports, 14(1), 7232. https://doi.org/10.1038/s41598-024-57970-7
 
 Msoud Nickparvar. (2021). Brain Tumor MRI Dataset [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DSV/2645886
+
+Woźniak, M., Siłka, J., & Wieczorek, M. (2023). Deep neural network correlation learning mechanism for CT brain tumor detection. Neural Computing and Applications, 35(20), 14611-14626. https://doi.org/10.1007/s00521-021-05841-x
+
