@@ -9,15 +9,9 @@ NeuroScan is a deep learning–based computer vision application designed to det
   
 - No Tumor
 ## Project Background
-The purpose of this project is ________. (Describe the main goals of the project and potential civic impact. Limit to a short paragraph, 3-6 Sentences)
+Brain tumors are abnormal growths of cells within the brain or its surrounding structures, which can be either benign (non-cancerous) or malignant (cancerous). They are classified into several types based on their origin and behavior, with the most common primary brain tumors including gliomas (arising from glial cells, often aggressive), meningiomas (typically benign, forming in the meninges), and pituitary adenomas (developing in the pituitary gland). Early and accurate detection is critical, as tumors can cause neurological deficits, seizures, or life-threatening complications depending on their size and location. Traditional diagnosis relies on MRI or CT scans analyzed by radiologists, but manual interpretation can be time-consuming and subjective. 
 
-### Methods Used
-* Inferential Statistics
-* Machine Learning
-* Data Visualization
-* Predictive Modeling
-* etc.
-
+NeuroScan addresses these challenges by leveraging deep learning to automate brain tumor classification, providing rapid, standardized assessments of MRI scans. By distinguishing between tumor types and non-tumor cases with high accuracy, this system aids clinicians in prioritizing urgent cases, reducing diagnostic delays, and improving patient outcomes. The tool is particularly valuable in resource-limited settings where access to specialized neuroradiologists is scarce.
 
 ### Technologies Used
 * Python
@@ -28,7 +22,7 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 ## Getting Started
 
-1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
+1. NeuroScan can be accessed at the following link: 
 2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
 
     *If using offline data mention that and how they may obtain the data from the froup)*
@@ -54,11 +48,14 @@ Image augmentation was used to improve model genralization while preserving crit
    &emsp; Purpose: Helps the model learn to detect tumors even when the tumor region isn't sharply defined.
 
 ## Training the Model
-Optimizer: Adam (lr=0.0001)
-Loss: Sparse Categorical Crossentropy
-Batch Size: 20
-Epochs: 50
-Fine-Tuning: Last 20 layers unfrozen
+### Training Parameters
+* **Optimizer:** Adam (lr=0.0001)
+* Loss: Sparse Categorical Crossentropy
+* Batch Size: 20
+* Epochs: 50
+* Fine-Tuning: Last 20 layers unfrozen
+
+The training parameters were carefully selected to balance model performance and computational efficiency while leveraging transfer learning. The Adam optimizer with a low learning rate (0.0001) was chosen to enable stable fine-tuning of the pretrained MobileNetV3Large base model—this conservative rate prevents drastic overwriting of the pretrained weights while still allowing meaningful updates to the unfrozen layers. Sparse categorical crossentropy was selected as the loss function because it efficiently handles multi-class classification (glioma, meningioma, pituitary, no tumor) without requiring one-hot encoded labels. A batch size of 20 provides a compromise between memory constraints (critical for high-resolution 224×224 MRI images) and gradient stability during training. The model was trained for 50 epochs to ensure full convergence. Only the last 20 layers were unfrozen to preserve the base model’s early-layer feature detectors (while specializing the deeper layers for MRI image features. Together, these parameters optimize the trade-off between retaining transfer learning benefits and adapting to brain tumor detection.
 
 ### Why Transfer Learning?
 Transfer learning is crucial for medical imaging where:
