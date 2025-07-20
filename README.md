@@ -1,7 +1,6 @@
 # 🧠 NeuroScan
 NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. Built with Streamlit and TensorFlow, it provides a user-friendly interface for medical professionals and researchers to quickly assess potential abnormalities.The model is trained to distinguish among four distinct classes:
 
-
 - Pituitary Tumors
 
 - Glioma Tumors
@@ -20,7 +19,7 @@ The purpose of this project is ________. (Describe the main goals of the project
 * etc.
 
 
-### Technologies
+### Technologies Used
 * Python
 * TensorFlow
 * Streamlit
@@ -42,10 +41,24 @@ The purpose of this project is ________. (Describe the main goals of the project
 5. Follow setup [instructions](Link to file)
 
 ## Data & Preprocessing
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+The data for this project was sourced from the Brain Tumor MRI Dataset on Kaggle.
+### Image Augmentation
+Image augmentation was used to improve model genralization while preserving critical diagnostic features in the MRI scans. The methods used for image augmentation include:
+
+**1. Brightness Adjustment** -> Randomly increases or decreases the image brightness by ±20%.
+   
+   &emsp; Purpose: Mimics variations in scanner intensity and lighting conditions.
+   
+**2. Contrast Enhancement** -> Randomly adjusts the contrast, making details either more or less prominent.
+   
+   &emsp; Purpose: Helps the model learn to detect tumors even when the tumor region isn't sharply defined.
 
 ## Training the Model
-
+Optimizer: Adam (lr=0.0001)
+Loss: Sparse Categorical Crossentropy
+Batch Size: 20
+Epochs: 50
+Fine-Tuning: Last 20 layers unfrozen
 
 ### Why Transfer Learning?
 Transfer learning is crucial for medical imaging where:
