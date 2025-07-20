@@ -21,14 +21,11 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 
 ### Technologies
-* R 
 * Python
-* D3
-* PostGres, MySql
-* Pandas, jupyter
-* HTML
-* JavaScript
-* etc.
+* TensorFlow
+* Streamlit
+* Pandas
+* Numpy
 
 ## Getting Started
 
