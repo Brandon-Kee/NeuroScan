@@ -22,31 +22,56 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 ## Getting Started
 
-1. NeuroScan can be accessed at the following link: https://neuro-scan.streamlit.app/
-2. 
+1. Access NeuroScan via this link: https://neuro-scan.streamlit.app/
+2. Upload an MRI scan image (sample images are available in the `test_images` folder)
+3. The model will automatically analyze the scan and display the predicted tumor classification
 
 ## Data & Preprocessing
-The data for this project was sourced from the Brain Tumor MRI Dataset on Kaggle.
+The data for this project was sourced from the [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
+ on Kaggle.
 ### Image Augmentation
-Image augmentation was used to improve model genralization while preserving critical diagnostic features in the MRI scans. The methods used for image augmentation include:
+Image augmentation was used to improve model generalization while preserving critical diagnostic features in the MRI scans. The methods used for image augmentation include:
 
-**1. Brightness Adjustment** -> Randomly increases or decreases the image brightness by ±20%.
+**1. Brightness Adjustment** -> Randomly increases or decreases the image brightness by ±20%
    
-   &emsp; Purpose: Mimics variations in scanner intensity and lighting conditions.
+   &emsp; Purpose: Mimics variations in scanner intensity and lighting conditions
    
-**2. Contrast Enhancement** -> Randomly adjusts the contrast, making details either more or less prominent.
+**2. Contrast Enhancement** -> Randomly adjusts the contrast, making details either more or less prominent
    
-   &emsp; Purpose: Helps the model learn to detect tumors even when the tumor region isn't sharply defined.
+   &emsp; Purpose: Helps the model learn to detect tumors even when the tumor region isn't sharply defined
+   
+![Uploading Screenshot 2025-07-20 at 9.24.45 AM.png…]()
 
 ## Training the Model
-### Training Parameters
-* **Optimizer:** Adam (lr=0.0001)
-* Loss: Sparse Categorical Crossentropy
-* Batch Size: 20
-* Epochs: 50
-* Fine-Tuning: Last 20 layers unfrozen
 
-The training parameters were carefully selected to balance model performance and computational efficiency while leveraging transfer learning. The Adam optimizer with a low learning rate (0.0001) was chosen to enable stable fine-tuning of the pretrained MobileNetV3Large base model—this conservative rate prevents drastic overwriting of the pretrained weights while still allowing meaningful updates to the unfrozen layers. Sparse categorical crossentropy was selected as the loss function because it efficiently handles multi-class classification (glioma, meningioma, pituitary, no tumor) without requiring one-hot encoded labels. A batch size of 20 provides a compromise between memory constraints (critical for high-resolution 224×224 MRI images) and gradient stability during training. The model was trained for 50 epochs to ensure full convergence. Only the last 20 layers were unfrozen to preserve the base model’s early-layer feature detectors (while specializing the deeper layers for MRI image features. Together, these parameters optimize the trade-off between retaining transfer learning benefits and adapting to brain tumor detection.
+### Training Configuration and Rationale
+
+- **Transfer Learning Strategy**  
+  Used **MobileNetV3Large** with transfer learning to leverage pretrained visual features
+
+- **Optimizer**  
+  Chose the **Adam optimizer** with a **low learning rate (0.0001)** to:  
+  - Prevent large updates that could overwrite pretrained weights  
+  - Allow gradual fine-tuning of the unfrozen layers
+
+- **Loss Function**  
+  Used **sparse categorical crossentropy** for multi-class classification:  
+  - Suitable for classifying **glioma, meningioma, pituitary tumor, and no tumor**  
+  - Efficient as it does not require one-hot encoding of labels
+
+- **Batch Size**  
+  Set to **20** to balance:  
+  - **Memory constraints** from processing 224×224 MRI images  
+  - **Gradient stability** during training
+
+- **Epochs**  
+  Trained for **50 epochs** to ensure the model **fully converges**
+
+- **Layer Freezing**  
+  Only the **last 20 layers** were unfrozen to:  
+  - Retain early-layer features useful for general image recognition  
+  - Specialize deeper layers for MRI-specific tumor detection
+
 
 ### Why Transfer Learning?
 Transfer learning is crucial for medical imaging where:
@@ -58,6 +83,16 @@ Transfer learning is crucial for medical imaging where:
 MobileNetV3Large, trained on millions of images, already understands basic visual features (edges, textures, shapes). By freezing these layers, the model adapts quickly to specialized medical data.
 
 ### MobileNetV3
+**Optimized for Transfer Learning:** Pre-trained on ImageNet, making it highly effective when fine-tuned on medical imaging tasks
+
+**Fast Inference Time:** Ideal for real-time predictions in a web app environment
+
+**Small Model Size:** Easier to deploy and more memory-efficient than larger models like ResNet or Inception
+
+**High Accuracy on Limited Data:** Performs well even with smaller datasets, which is necessary for the brain tumor dataset
+
+**Robust Performance:** Balances speed, accuracy, and resource usage—key for user-facing tools
+
 <img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/93897077-3595-4f92-a6b4-b54e67618f26" />
 
 
