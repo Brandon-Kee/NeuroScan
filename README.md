@@ -1,5 +1,5 @@
 # 🧠 NeuroScan
-NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. Built with Streamlit and TensorFlow, it provides a user-friendly interface for medical professionals and researchers to quickly assess potential abnormalities.The model is trained to distinguish among four distinct classes:
+NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. Built with Streamlit and TensorFlow, it provides a user-friendly interface for medical professionals and researchers to quickly assess potential abnormalities. The model is trained to distinguish among four distinct classes:
 
 - Pituitary Tumors
 
@@ -26,6 +26,10 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 2. Upload an MRI scan image (sample images are available in the `test_images` folder)
 3. The model will automatically analyze the scan and display the predicted tumor classification
 
+### Demo
+
+
+
 ## Data & Preprocessing
 The data for this project was sourced from the [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
  on Kaggle.
@@ -51,11 +55,11 @@ To improve model generalization without compromising important diagnostic featur
 
 #### Brightness Adjustment
 - Randomly modifies image brightness by up to **±20%**.
-> 🎯 *Simulates real-world variations in scanner intensity and lighting conditions.*
+> ✅  *Simulates real-world variations in scanner intensity and lighting conditions.*
 
 #### Contrast Enhancement
 - Randomly changes the **contrast** to make image details more or less prominent.
-> 🎯 *Helps the model recognize tumors even when tumor boundaries are faint or ambiguous.*
+> ✅  *Helps the model recognize tumors even when tumor boundaries are faint or ambiguous.*
 
    
 <img width="917" height="400" alt="Screenshot 2025-07-20 at 9 24 45 AM" src="https://github.com/user-attachments/assets/fb7b553e-ff87-4a4b-bced-75a53da020de" />
@@ -116,13 +120,11 @@ MobileNetV3Large, trained on millions of images, already understands basic visua
 
 
 ## Results
+<img width="451" height="192" alt="Screenshot 2025-07-20 at 11 13 12 AM" src="https://github.com/user-attachments/assets/2acb0f5e-d8af-4a7f-90bb-ebdde97c7b17" />
 
-<img width="710" height="545" alt="Screenshot 2025-07-20 at 9 25 21 AM" src="https://github.com/user-attachments/assets/399e6a67-9ae1-4ecf-b952-4ba3bc938504" />
+<img width="700" height="545" alt="Screenshot 2025-07-20 at 9 25 21 AM" src="https://github.com/user-attachments/assets/399e6a67-9ae1-4ecf-b952-4ba3bc938504" />
 
-
-## Demo
-
-
+<img width="700" height="545" alt="Screenshot 2025-07-20 at 11 13 42 AM" src="https://github.com/user-attachments/assets/3301b4a0-0905-40da-9209-c5f46128b7a4" />
 
 
 ## References
