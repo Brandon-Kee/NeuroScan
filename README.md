@@ -22,17 +22,8 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 ## Getting Started
 
-1. NeuroScan can be accessed at the following link: 
-2. Raw Data is being kept [here](Repo folder containing raw data) within this repo.
-
-    *If using offline data mention that and how they may obtain the data from the froup)*
-    
-3. Data processing/transformation scripts are being kept [here](Repo folder containing data processing scripts/notebooks)
-4. etc...
-
-*If your project is well underway and setup is fairly complicated (ie. requires installation of many packages) create another "setup.md" file and link to it here*  
-
-5. Follow setup [instructions](Link to file)
+1. NeuroScan can be accessed at the following link: https://neuro-scan.streamlit.app/
+2. 
 
 ## Data & Preprocessing
 The data for this project was sourced from the Brain Tumor MRI Dataset on Kaggle.
