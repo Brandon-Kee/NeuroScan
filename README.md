@@ -1,5 +1,5 @@
 # 🧠 NeuroScan
-NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. The model is trained to distinguish among four distinct classes:
+NeuroScan is a deep learning–based computer vision application designed to detect and classify brain tumors from MRI scans using MobileNetV3Large and transfer learning. Built with Streamlit and TensorFlow, it provides a user-friendly interface for medical professionals and researchers to quickly assess potential abnormalities.The model is trained to distinguish among four distinct classes:
 
 
 - Pituitary Tumors
@@ -49,16 +49,18 @@ The purpose of this project is ________. (Describe the main goals of the project
 
 ## Training the Model
 
+
+### Why Transfer Learning?
+Transfer learning is crucial for medical imaging where:
+
+- Labelled data is limited.
+- Training deep CNNs from scratch is computationally expensive.
+- Pretrained models can generalize well with minimal fine-tuning.
+
+MobileNetV3Large, trained on millions of images, already understands basic visual features (edges, textures, shapes). By freezing these layers, the model adapts quickly to specialized medical data.
+
 ### MobileNetV3
 <img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/93897077-3595-4f92-a6b4-b54e67618f26" />
-
-- frontend developers
-- data exploration/descriptive statistics
-- data processing/cleaning
-- statistical modeling
-- writeup/reporting
-- etc. (be as specific as possible)
-
 
 
 ## Results
