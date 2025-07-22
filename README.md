@@ -22,7 +22,7 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 ## Getting Started
 
-1. Access NeuroScan via this link: https://neuro-scan.streamlit.app/
+1. Access NeuroScan [here](https://neuro-scan.streamlit.app/)
 2. Upload an MRI scan image (sample images are available in the `test_images` folder)
 3. The model will automatically analyze the scan and display the predicted tumor classification
 
@@ -30,7 +30,7 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 
 
-## Data & Preprocessing
+## ⚙️ Data & Preprocessing
 The data for this project was sourced from the [Brain Tumor MRI Dataset](https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset)
  on Kaggle.
 
@@ -99,9 +99,9 @@ To improve model generalization without compromising important diagnostic featur
 ### Why Transfer Learning?
 Transfer learning is crucial for medical imaging where:
 
-- Labelled data is limited.
-- Training deep CNNs from scratch is computationally expensive.
-- Pretrained models can generalize well with minimal fine-tuning.
+- Labelled data is limited
+- Training deep CNNs from scratch is computationally expensive
+- Pretrained models can generalize well with minimal fine-tuning
 
 MobileNetV3Large, trained on millions of images, already understands basic visual features (edges, textures, shapes). By freezing these layers, the model adapts quickly to specialized medical data.
 
