@@ -24,7 +24,7 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 1. Access NeuroScan [here](https://neuro-scan.streamlit.app/)
 2. Upload an MRI scan image (sample images are available in the `test_images` folder)
-3. The model will automatically analyze the scan and display the predicted tumor classification.
+3. The model will automatically analyze the scan and display the predicted tumor classification
 
 ### Demo
 
