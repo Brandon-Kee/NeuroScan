@@ -37,17 +37,14 @@ The data for this project was sourced from the [Brain Tumor MRI Dataset](https:/
  #### Image Resizing & Normalization
 - All MRI images were resized to **128×128 pixels** to reduce input complexity and speed up training.
 - Pixel values were **normalized to the range [0, 1]**, which stabilizes gradient updates and accelerates convergence.
-> ✅ *Standardized input scaling helps prevent the model from overfitting to intensity-based artifacts.*
 
 #### Randomized Data Shuffling
 - **Training and testing image paths were shuffled** prior to loading.
 - This avoids the model learning any pattern related to file order or folder structure.
-> ✅ *Introduces statistical randomness into batches, improving generalization.*
 
 #### Dropout for Regularization
 - A **dropout layer with rate 0.5** was added in the classification head
 - During training, half the neurons are randomly deactivated, forcing the model to rely on multiple redundant features.
-> ✅ Promotes robustness by preventing over-reliance on specific neurons.
 
 ### Image Augmentation
 
