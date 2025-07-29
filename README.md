@@ -28,6 +28,8 @@ NeuroScan addresses these challenges by leveraging deep learning to **automate b
 
 ### Demo
 
+https://github.com/user-attachments/assets/872736f4-d5f7-4346-a5a4-43136c7a6620
+
 
 
 ## ⚙️ Data & Preprocessing
@@ -45,6 +47,8 @@ The data for this project was sourced from the [Brain Tumor MRI Dataset](https:/
 #### Dropout for Regularization
 - A **dropout layer with rate 0.5** was added in the classification head
 - During training, half the neurons are randomly deactivated, forcing the model to rely on multiple redundant features.
+  
+---
 
 ### Image Augmentation
 
@@ -91,7 +95,7 @@ To improve model generalization without compromising important diagnostic featur
   Only the **last 20 layers** were unfrozen to:  
   - Retain early-layer features useful for general image recognition  
   - Specialize deeper layers for MRI-specific tumor detection
-
+---
 
 ### Why Transfer Learning?
 Transfer learning is crucial for medical imaging where:
@@ -101,6 +105,8 @@ Transfer learning is crucial for medical imaging where:
 - Pretrained models can generalize well with minimal fine-tuning
 
 MobileNetV3Large, trained on millions of images, already understands basic visual features (edges, textures, shapes). By freezing these layers, the model adapts quickly to specialized medical data.
+
+---
 
 ### MobileNetV3
 * **Optimized for Transfer Learning:** Pre-trained on ImageNet, making it highly effective when fine-tuned on medical imaging tasks
@@ -113,7 +119,6 @@ MobileNetV3Large, trained on millions of images, already understands basic visua
 
 * **Robust Performance:** Balances speed, accuracy, and resource usage—key for user-facing tools
 
-<img width="700" height="450" alt="image" src="https://github.com/user-attachments/assets/93897077-3595-4f92-a6b4-b54e67618f26" />
 
 
 ## Results
