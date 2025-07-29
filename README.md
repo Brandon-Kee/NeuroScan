@@ -139,9 +139,6 @@ The NeuroScan brain tumor detection model demonstrates strong overall performanc
 
 Some minor confusion is observed between glioma and meningioma, with a few glioma cases being predicted as meningioma and vice versa. This likely stems from overlapping visual characteristics between these tumor types in MRI images. Despite this, the model maintains high recall and F1-scores for both, with glioma at 0.9567 recall and meningioma at 0.9575. These results validate OpenNetV3’s strength in extracting meaningful features from brain scans while remaining efficient and scalable. To further improve performance—particularly in differentiating glioma and meningioma—future iterations could incorporate attention mechanisms or multi-modal data (e.g., clinical notes, radiomic features). Overall, OpenNetV3 enables NeuroScan to deliver fast, reliable tumor detection that could significantly assist radiologists in clinical decision-making.
 
-### ROC Curve
-<img width="700" height="545" alt="Screenshot 2025-07-20 at 11 13 42 AM" src="https://github.com/user-attachments/assets/3301b4a0-0905-40da-9209-c5f46128b7a4" />
-
 
 ## References
 Kumar, S., & Mankame, D. P. (2020). Optimization driven deep convolution neural network for brain tumor classification. Biocybernetics and Biomedical Engineering, 40(3), 1190-1204. https://doi.org/10.1016/j.bbe.2020.05.009
