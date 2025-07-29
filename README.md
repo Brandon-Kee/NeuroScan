@@ -62,7 +62,7 @@ To improve model generalization without compromising important diagnostic featur
 - Randomly changes the **contrast** to make image details more or less prominent.
 > ✅  *Helps the model recognize tumors even when tumor boundaries are faint or ambiguous.*
 
-   
+#### Augmented MRI Scans   
 <img width="917" height="400" alt="Screenshot 2025-07-20 at 9 24 45 AM" src="https://github.com/user-attachments/assets/fb7b553e-ff87-4a4b-bced-75a53da020de" />
 
 
@@ -122,10 +122,24 @@ MobileNetV3Large, trained on millions of images, already understands basic visua
 
 
 ## Results
-<img width="451" height="192" alt="Screenshot 2025-07-20 at 11 13 12 AM" src="https://github.com/user-attachments/assets/2acb0f5e-d8af-4a7f-90bb-ebdde97c7b17" />
 
+The NeuroScan brain tumor detection model demonstrates strong overall performance, achieving an accuracy of 97.9% across four classes: pituitary tumor, no tumor, glioma, and meningioma. According to the confusion matrix, the model classifies "no tumor" cases perfectly with no false positives or false negatives, resulting in a recall of 1.00 and an F1-score of 0.9988. Similarly, the model performs exceptionally well on pituitary tumors with high precision (0.9739) and recall (0.9967), indicating reliable identification with minimal misclassification. However, slight confusion exists between glioma and meningioma, which is reflected in a few glioma samples being predicted as meningioma (12 cases) and vice versa. This is understandable given their overlapping imaging characteristics.
+
+### Classification Report
+
+| Class         | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| 0 (pituitary) | 0.9739    | 0.9967 | 0.9852   | 300     |
+| 1 (no tumor)  | 0.9975    | 1.0000 | 0.9988   | 405     |
+| 2 (glioma)    | 0.9829    | 0.9567 | 0.9696   | 300     |
+| 3 (meningioma)| 0.9575    | 0.9575 | 0.9575   | 306     |
+
+### Confusion Matrix
 <img width="700" height="545" alt="Screenshot 2025-07-20 at 9 25 21 AM" src="https://github.com/user-attachments/assets/399e6a67-9ae1-4ecf-b952-4ba3bc938504" />
 
+Some minor confusion is observed between glioma and meningioma, with a few glioma cases being predicted as meningioma and vice versa. This likely stems from overlapping visual characteristics between these tumor types in MRI images. Despite this, the model maintains high recall and F1-scores for both, with glioma at 0.9567 recall and meningioma at 0.9575. These results validate OpenNetV3’s strength in extracting meaningful features from brain scans while remaining efficient and scalable. To further improve performance—particularly in differentiating glioma and meningioma—future iterations could incorporate attention mechanisms or multi-modal data (e.g., clinical notes, radiomic features). Overall, OpenNetV3 enables NeuroScan to deliver fast, reliable tumor detection that could significantly assist radiologists in clinical decision-making.
+
+### ROC Curve
 <img width="700" height="545" alt="Screenshot 2025-07-20 at 11 13 42 AM" src="https://github.com/user-attachments/assets/3301b4a0-0905-40da-9209-c5f46128b7a4" />
 
 
